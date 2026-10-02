@@ -1,0 +1,18 @@
+### Local: page one (start src/server.js first)
+GET http://127.0.0.1:8787/items?page=1
+
+### Local: JSON echo
+POST http://127.0.0.1:8787/echo
+Content-Type: application/json
+
+{"message":"Hello API"}
+
+### Local: intentional authentication failure
+GET http://127.0.0.1:8787/bearer
+
+### Local: success with a deliberately public demo token
+GET http://127.0.0.1:8787/bearer
+Authorization: Bearer local-demo-token
+
+### Public read-only sample for the hosted Playground
+GET https://jsonplaceholder.typicode.com/posts/1

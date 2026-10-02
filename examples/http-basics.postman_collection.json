@@ -1,0 +1,54 @@
+{
+  "info": {
+    "name": "API Playground HTTP Basics",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Local pagination",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://127.0.0.1:8787/items?page=1"
+      }
+    },
+    {
+      "name": "Local bearer success",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer local-demo-token"
+          }
+        ],
+        "url": "http://127.0.0.1:8787/bearer"
+      }
+    },
+    {
+      "name": "Local JSON echo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://127.0.0.1:8787/echo",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"message\":\"Hello API\"}"
+        }
+      }
+    },
+    {
+      "name": "Public GET",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "https://jsonplaceholder.typicode.com/posts/1"
+      }
+    }
+  ]
+}
